@@ -10,7 +10,8 @@ function main(env) {
         rc(env).then(function(config){
             let output = {
                 filename: '[name].js',
-                path: config.output
+                path: config.output,
+                publicPath: '/'
             }
             return output
         }).then(function(data){

@@ -7,6 +7,7 @@ const entry = require('./entry')
 const output = require('./output')
 const resolve = require('./resolve')
 const watch = require('./watch')
+const devserver = require('./devserver')
 const merge = require('webpack-merge')
 
 function config(result) {
@@ -26,7 +27,8 @@ function main(env) {
             entry(env),
             output(env),
             resolve(env),
-            watch(env)
+            watch(env),
+            devserver(env)
         ]
         Promise.all(list).then(function(result){
             return config(result)

@@ -27,7 +27,8 @@ function projectData(src) {
         src: dir('src', 'src'), // 获取源码目录,
         entry: dir('entry', 'build/entry'),
         output: dir('output', 'dist'),
-        watch: !!cliRc.watch
+        watch: !!cliRc.watch,
+        devserver: !!cliRc.devserver,
     }
 }
 
@@ -37,6 +38,8 @@ function config() {
         src: path.join(root, 'src'),
         output: path.join(root, 'dist'),
         entry: path.join(root, 'build/entry'),
+        watch: false,
+        devserver: false
     }
 }
 
