@@ -1,0 +1,36 @@
+{
+  "name": "@svon/cli",
+  "version": "1.0.0",
+  "description": "webpack & babel",
+  "main": "index.js",
+  "bin": {
+      "vuecli": "./bin/vuecli.js"
+  },
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svon/cli.git"
+  },
+  "keywords": [
+    "webpack",
+    "&",
+    "babel"
+  ],
+  "author": "svon.me@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/svon/cli/issues"
+  },
+  "homepage": "https://github.com/svon/cli#readme",
+  "dependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "webpack-merge": "^4.2.2"
+  },
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
+  }
+}
