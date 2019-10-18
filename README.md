@@ -24,7 +24,7 @@ yarn add -D webpack webpack-cli @svon/cli
     "entry": "webpackentry.js"  // 入口文件配置 （基于 webpack entry 配置方式进行配置）
 }
 ```
-** webpackentry.js **
+##### webpackentry.js
 
 ```
 const entry = {
@@ -33,7 +33,7 @@ const entry = {
 module.exports = entry
 ```
 
-**  使用 **
+##### 使用
 ```
 npm run dev
 ```
@@ -52,7 +52,7 @@ npm run dev
     "entry": "webpackentry.js"  // 入口文件配置 （基于 webpack entry 配置方式进行配置）
 }
 ```
-** webpack.config.js **
+##### webpack.config.js
 
 ```
 const cli = require('@svon/cli')
@@ -70,7 +70,7 @@ function main() {
 module.exports = main
 ```
 
-**  使用 **
+#####  使用
 ```
 npm run dev
 ```
