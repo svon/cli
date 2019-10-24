@@ -3,22 +3,16 @@
     author: svon.me@gmail.com
 */
 
-const rc = require('./rc')
-
 function main(env) {
-    return new Promise(function(resolve){
-        rc(env).then(function(config){
-            let output = {
-                filename: '[name].js',
-                path: config.output,
-                publicPath: '/'
-            }
-            return output
-        }).then(function(data){
-            resolve({
-                output: data
-            })
-        })
+    let output = {
+        filename: '[name].js',
+        path: env.output,
+        libraryTarget: 'umd',
+        publicPath: '/',
+        chunkFilename: '[name].[hash].chunk.js'
+    }
+    return Promise.resolve({
+            output: output
     })
 }
 

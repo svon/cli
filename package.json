@@ -1,10 +1,10 @@
 {
   "name": "@svon/cli",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "description": "webpack & babel",
   "main": "index.js",
   "bin": {
-    "vuecli": "./bin/vuecli.js"
+    "svoncli": "./bin/cli.js"
   },
   "scripts": {
     "test": "node index.js"
@@ -27,7 +27,32 @@
   "dependencies": {
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",
+    "@babel/runtime": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.0",
+    "@babel/plugin-transform-arrow-functions": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/plugin-transform-spread": "^7.6.2",
+    "@babel/preset-env": "^7.6.3",
+    "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0",
+    "@vue/babel-plugin-transform-vue-jsx": "^1.0.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-add-module-exports": "^1.0.2",
+    "css-loader": "^3.2.0",
     "html-webpack-plugin": "^3.2.0",
+    "html-loader": "^0.5.5",
+    "less-loader": "^5.0.0",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
+    "pug": "^2.0.4",
+    "pug-plain-loader": "^1.0.0",
+    "sass-loader": "^8.0.0",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2",
+    "vue-loader": "^15.7.1",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.10",
     "webpack-dev-server": "^3.8.2",
     "webpack-merge": "^4.2.2"
   },

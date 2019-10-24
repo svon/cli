@@ -3,10 +3,17 @@
     author: svon.me@gmail.com
 */
 
-const config = require('./src/common/webpack')
+const rc = require('./src/rc')
+const vueConfig = require('./src/vue/index')
 
 function main(tmp, env) {
-    return config(env)
+    return new Promise(function(resolve){
+        rc(env).then(function(option){
+            return vueConfig(option)
+        }).then(function(data){
+            resolve(data)
+        })
+    })
 }
 
 module.exports = main
