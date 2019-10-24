@@ -31,7 +31,8 @@ function projectData(src, env) {
         watch: !!cliRc.watch,
         devserver: !!cliRc.devserver,
         lang: cliRc.lang || 'es',
-        node: cliRc.node || 'development'
+        mode: cliRc.node || 'development',
+        template: cliRc.template || []
     }
 }
 
@@ -44,7 +45,8 @@ function config() {
         watch: false,
         devserver: false,
         lang: 'es',
-        node: cliRc.node || 'development'
+        mode: cliRc.node || 'development',
+        template: []
     }
 }
 

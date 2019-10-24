@@ -10,8 +10,8 @@ const resolve = require('./resolve')
 const watch = require('./watch')
 const rules = require('./rules')
 const devserver = require('./devserver')
+const html = require('./html')
 const merge = require('webpack-merge')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 function config(result, env) {
     let config
@@ -26,16 +26,7 @@ function config(result, env) {
             devtool: false,
         }
     }
-    let htmlTemplate = {
-        inject: true,
-        template: path.join(env.src, 'index.html'),
-        filename: path.join(env.output, 'index.html'),
-        chunksSortMode: 'dependency',
-    }
-    console.log(htmlTemplate)
-    config['plugins'] = [
-        new HtmlWebpackPlugin(htmlTemplate),
-    ]
+
     for(let i = 0, size = result.length; i < size; i++) {
         config = merge(config, result[i])
     }
@@ -51,6 +42,7 @@ function main(env) {
             watch(env),
             rules(env),
             devserver(env),
+            html(env),
         ]
         Promise.all(list).then(function(result){
             return config(result, env)
