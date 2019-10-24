@@ -1,6 +1,6 @@
 {
   "name": "@svon/cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "webpack & babel",
   "main": "index.js",
   "bin": {
@@ -36,7 +36,6 @@
     "@babel/preset-env": "^7.6.3",
     "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0",
     "@vue/babel-plugin-transform-vue-jsx": "^1.0.0",
-    "babel-core": "^6.26.3",
     "babel-loader": "^8.0.6",
     "babel-plugin-add-module-exports": "^1.0.2",
     "css-loader": "^3.2.0",
