@@ -9,8 +9,6 @@ const output = require('./output')
 const resolve = require('./resolve')
 const watch = require('./watch')
 const rules = require('./rules')
-const devserver = require('./devserver')
-const html = require('./html')
 const merge = require('webpack-merge')
 
 function config(result, env) {
@@ -41,8 +39,6 @@ function main(env) {
             resolve(env),
             watch(env),
             rules(env),
-            devserver(env),
-            html(env),
         ]
         Promise.all(list).then(function(result){
             return config(result, env)
