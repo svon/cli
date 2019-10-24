@@ -1,0 +1,21 @@
+{
+    "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "targets": {
+                "esmodules": true
+            }
+          }
+        ]
+    ],
+    "plugins": [
+        "@babel/plugin-transform-spread",
+        "@babel/proposal-class-properties",
+        "@babel/proposal-object-rest-spread",
+        "@babel/plugin-transform-arrow-functions",
+        "@babel/plugin-transform-runtime",
+        "add-module-exports",
+        "transform-vue-jsx"
+    ]
+}
