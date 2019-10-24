@@ -13,7 +13,6 @@ function htmlTemplate(env, name){
     } else {
         html = path.join(env.src, name)
     }
-    let html = path.join(env.src, name)
     let htmlTemplate = {
         inject: true,
         template: html,

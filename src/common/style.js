@@ -3,27 +3,56 @@
     author: svon.me@gmail.com
 */
 
-function style(name) {
-    return {
-        test: /\.css$/,
-        use: [
-            'vue-style-loader',
-            {
-                loader: 'css-loader',
-                options: { importLoaders: 1 }
-            },
-            'postcss-loader',
-            name + '-loader'
-        ]
-    }
-}
-
 function main() {
-    let styles = []
-    let names = ['sass', 'less', 'styleus']
-    for(var i = 0, size = names.length; i < size; i++) {
-        styles.push(style(names[i]))
-    }
+    let styles = [
+        {
+            test: /\.css$/,
+            use: [
+                'vue-style-loader',
+                {
+                    loader: 'css-loader',
+                    options: { importLoaders: 1 }
+                },
+                'postcss-loader'
+            ]
+        },
+        {
+            test: /\.scss$/,
+            use: [
+                'vue-style-loader',
+                {
+                    loader: 'css-loader',
+                    options: { importLoaders: 1 }
+                },
+                'postcss-loader',
+                'sass-loader'
+            ]
+        },
+        {
+            test: /\.less$/,
+            use: [
+                'vue-style-loader',
+                {
+                    loader: 'css-loader',
+                    options: { importLoaders: 1 }
+                },
+                'postcss-loader',
+                'less-loader'
+            ]
+        },
+        {
+            test: /\.styleus$/,
+            use: [
+                'vue-style-loader',
+                {
+                    loader: 'css-loader',
+                    options: { importLoaders: 1 }
+                },
+                'postcss-loader',
+                'styleus-loader'
+            ]
+        }
+    ]
     return styles
 }
 

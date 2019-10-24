@@ -1,21 +1,24 @@
 {
     "presets": [
-        [
-          "@babel/preset-env",
-          {
+        "@babel/preset-env",
+        {
             "targets": {
-                "esmodules": true
+                "debug": false,
+                "modules": "commonjs",
+                "targets": {
+                    "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+                }
             }
-          }
-        ]
+        }
     ],
     "plugins": [
+        "@babel/plugin-syntax-dynamic-import",
         "@babel/plugin-transform-spread",
         "@babel/proposal-class-properties",
         "@babel/proposal-object-rest-spread",
         "@babel/plugin-transform-arrow-functions",
+        "transform-vue-jsx",
         "@babel/plugin-transform-runtime",
-        "add-module-exports",
-        "transform-vue-jsx"
+        "@babel/plugin-transform-modules-commonjs"
     ]
 }

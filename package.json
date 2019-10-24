@@ -1,6 +1,6 @@
 {
   "name": "@svon/cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "webpack & babel",
   "main": "index.js",
   "bin": {
@@ -45,6 +45,7 @@
     "lodash": "^4.17.15",
     "node-sass": "^4.12.0",
     "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.6.0",
     "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^8.0.0",
