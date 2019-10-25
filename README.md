@@ -76,7 +76,7 @@ npm run dev
 ```
 ##### webpack.config.js
 
-```
+```js
 const cli = require('@svon/cli')
 
 function main() {
